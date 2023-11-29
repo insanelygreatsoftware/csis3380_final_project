@@ -16,8 +16,8 @@ app.use(async (req, res, next) => {
   const client = new MongoClient(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    ssl: true,
-    sslValidate: false,
+    tls: true,
+    tlsInsecure: true,
   });
 
   try {
