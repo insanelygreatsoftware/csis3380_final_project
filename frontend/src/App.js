@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 function App() {
   const [isAdmin, setIsAdmin] = useState(false);
-  const host = process.env.NODE_ENV === 'production' ? 'https://booking-app-frontend.vercel.app' : 'http://localhost:3001';
+  const host = process.env.NODE_ENV === 'production' ? 'https://csis3380-final-project-lwvl.onrender.com' : 'http://localhost:3001';
 
   console.log(host);
 
