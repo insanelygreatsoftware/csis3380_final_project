@@ -13,7 +13,12 @@ app.use(cors());
 // connect to mongodb
 app.use(async (req, res, next) => {
   const uri = `mongodb+srv://christsang:christsang523@cluster0.vlponpx.mongodb.net/`;
-  const client = new MongoClient(uri);
+  const client = new MongoClient(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    ssl: true,
+    sslValidate: false,
+  });
 
   try {
     await client.connect();
