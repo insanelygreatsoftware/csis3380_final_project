@@ -14,8 +14,6 @@ app.use(cors());
 app.use(async (req, res, next) => {
   const uri = `mongodb+srv://christsang:christsang523@cluster0.vlponpx.mongodb.net/`;
   const client = new MongoClient(uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
     tls: true,
     tlsInsecure: true,
   });
